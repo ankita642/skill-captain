@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Forms – Practice Playground</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: none;
+        }
+
+        button {
+            background-color: #E5608E;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        label {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+<h1>HTML Forms – Practice Playground</h1>
+
+<div class="box">
+    <form>
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email">
+        input type="tel" placeholder="Enter phone number">
+<input type="tel" placeholder="Enter phone number">
+<input type="radio" name="contact"> Email <input type="radio" name="contact"> Phone
+<input type="checkbox"> I agree to the terms.
+<input type="date">
+
+
+
+
+        <label>Choose Category:</label>
+        <select>
+            <option>Feedback</option>
+            <option>Support</option>
+            <option>Query</option>
+        </select>
+
+        <label>Message:</label>
+        <textarea rows="4" placeholder="Write something..."></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
