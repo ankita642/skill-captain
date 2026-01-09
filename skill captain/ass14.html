@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML vs HTML – Practice Playground</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+            color: #fff;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffcc70;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        input, button, textarea {
+            margin-top: 8px;
+            padding: 10px;
+            width: 100%;
+            border-radius: 8px;
+            border: none;
+        }
+
+        button {
+            background: #ffcc70;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #ffb84d;
+        }
+
+        pre {
+            background: #33334d;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+<h1>XML vs HTML Practice</h1>
+<!DOCTYPE html>
+<html>
+  <head><title>HTML Example</title></head>
+  <body>
+    <h1>HTML Example</h1>
+    <p>This is a paragraph.</p>
+    <ul><li>Item 1</li><li>Item 2</li></ul>
+  </body>
+</html>
+
+
+<div class="card">
+    <h2>Task 1: Simple HTML Page</h2>
+    <p>Fill in the HTML structure below:</p>
+    <pre>
+&lt;!-- Add your HTML content here --&gt;
+&lt;h1&gt;Your Heading&lt;/h1&gt;
+&lt;p&gt;Your paragraph.&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+    </pre>
+</div>
+
+<div class="card">
+    <h2>Task 2: Simple XML Document</h2>
+    <p>Create a small XML structure to store data (e.g., books):</p>
+    <?xml version="1.0" encoding="UTF-8"?>
+<books>
+  <book>
+    <title>Book One</title>
+    <author>Author A</author>
+    <year>2023</year>
+  </book>
+</books>
+
+    <pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;books&gt;
+    &lt;book&gt;
+        &lt;title&gt;Your Book Title&lt;/title&gt;
+        &lt;author&gt;Author Name&lt;/author&gt;
+        &lt;year&gt;2025&lt;/year&gt;
+    &lt;/book&gt;
+&lt;/books&gt;
+    </pre>
+</div>
+
+<div class="card">
+    <h2>Task 3: Compare Tag Rules</h2>
+    <p>Update your HTML and XML examples to see these differences:</p>
+    <ul>
+        <li>HTML tags are predefined; XML tags are custom.</li>
+        <li>HTML is not case-sensitive; XML is case-sensitive.</li>
+        <li>HTML allows optional closing tags; XML requires all tags closed.</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>Task 4: Add Attributes</h2>
+    <p>Add attributes to your HTML and XML elements:</p>
+    <pre>
+&lt;img src="image.jpg" alt="Example Image"&gt; &lt;!-- HTML --&gt;
+&lt;book id="b1"&gt;...&lt;/book&gt; &lt;!-- XML --&gt;
+<img src="image.jpg" alt="Example Image"> <!-- HTML attribute example -->
+<book id="b1"> ... </book> <!-- XML attribute example -->
+
+    </pre>
+</div>
+
+<div class="card">
+    <h2>Task 5: Validate Your XML</h2>
+    <p>Check that your XML is well-formed:</p>
+    <ul>
+        <li>All tags are closed properly.</li>
+        <li>Tag names match case exactly (case-sensitive).</li>
+        <li>No overlapping tags.</li>
+    </ul>
+</div>
+
+</body>
+</html>
