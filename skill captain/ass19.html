@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Broken Landing Page</title>
+    <style>
+        body { margin:0; font-family:sans-serif; }
+        .hero {
+            height:400px;
+            background:#6d28d9;
+            color:white;
+            padding:40px;
+        }
+        .features {
+            display:flex;
+            gap:40px;
+            padding:40px;
+        }
+        .card {
+            width:300px;
+            height:200px;
+            background:#f4f4f4;
+            padding:20px;
+            border-radius:8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>Super App</h1>
+    <p>Make your life easier.</p>
+</div>
+
+<div class="features">
+    <div class="card">Feature A</div>
+    <div class="card">Feature B</div>
+    <div class="card">Feature C</div>
+    [12:15, 09/01/2026] Palak: <meta name="viewport" content="width=device-width, initial-scale=1.0">
+[12:15, 09/01/2026] Palak: .card {
+  width: 100%;          /* or use flex: 1; in a flexbox container */
+  max-width: 300px;      /* optional max limit */
+  /* or use percentage e.g., width: 33.33%; for 3 cards per row */
+}
+[12:15, 09/01/2026] Palak: .card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  flex: 1 1 300px; /* grow, shrink, basis */
+}
+[12:16, 09/01/2026] Palak: .card-container {
+  display: flex;
+  flex-direction: column; /* stack by default (mobile) */
+}
+
+@media (min-width: 768px) {
+  .card-container {
+    flex-direction: row; /* side‑by‑side on larger screens */
+  }
+}
+[12:16, 09/01/2026] Palak: .card {
+  width: 100%; /* or flex: 1; in a flexbox container */
+  max-width: 300px; /* optional */
+}
+[12:17, 09/01/2026] Palak: .card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+</div>
+
+</body>
+</html>
