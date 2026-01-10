@@ -1,0 +1,82 @@
+botton{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+    font-size: 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    animation: move 2s infinite alternate;
+}
+
+botton:hover{
+     background-color: red;
+}
+
+/*
+
+transition property-background-color
+
+transition-duration-3s
+
+transition-timing-function-linear
+                        ease
+                        ease-in
+                        ease-out
+                        ease-in-out
+
+*/
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: solid 2px black;
+    transition: background-color 1s linear;
+}
+
+.box:hover{
+    background-color: blue;
+}
+
+.box1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: solid 2px black;
+    transition: background-color 1s ease;
+
+}
+.box1:hover{
+    background-color: blue;
+}
+
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: solid 2px black;
+    transition: background-color 1s ease-in-out;
+}
+.box2:hover{
+    background-color: blue;
+}
+
+.box3{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: solid 2px black;
+    animation: move 2s 5;
+}
+
+@keyframes move{
+    
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(200px);
+    }
+}
