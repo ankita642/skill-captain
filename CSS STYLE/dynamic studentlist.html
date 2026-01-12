@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Student List</title>
+    <style>
+        body { font-family: sans-serif; }
+        .container { max-width: 400px; margin: 20px auto; }
+        input[type="text"] { padding: 8px; width: 70%; }
+        button#addButton { padding: 8px; }
+        ul { list-style-type: none; padding: 0; }
+        li { padding: 10px; border: 1px solid #ccc; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: center; }
+        .deleteButton { background-color: #f44336; color: white; border: none; padding: 5px 10px; cursor: pointer; }
+        .deleteButton:hover { background-color: #d32f2f; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student List</h1>
+        <input type="text" id="studentInput" placeholder="Enter student name">
+        <button id="addButton">Add Student</button>
+        <ul id="studentList"></ul>
+    </div>
+
+    <script>
+        // Array to store student names
+        let students = [];
+
+        // Get references to DOM elements
+        const studentInput = document.getElementById('studentInput');
+        const addButton = document.getElementById('addButton');
+        const studentList = document.getElementById('studentList');
+
+        // Function to add a student
+        function addStudent() {
+            const name = studentInput.value.trim();
+            if (name !== '') {
+                students.push(name); // Add name to the array
+                studentInput.value = ''; // Clear the input field
+                displayStudents(); // Update the DOM
+            }
+        }
+
+        // Function to delete a student
+        function deleteStudent(index) {
+            students.splice(index, 1); // Remove student from the array
+            displayStudents(); // Update the DOM
+        }
+
+        // Function to display students in the list
+        function displayStudents() {
+            studentList.innerHTML = ''; // Clear the current list in the DOM
+            
+            // Iterate over the students array and create DOM elements
+            for (let i = 0; i < students.length; i++) {
+                const listItem = document.createElement('li'); // Create <li>
+                listItem.textContent = students[i]; // Set the student name
+
+                const deleteButton = document.createElement('button'); // Create <button>
+                deleteButton.textContent = 'Delete';
+                deleteButton.classList.add('deleteButton');
+                // Use a closure or arrow function to pass the current index to the delete function
+                deleteButton.onclick = () => deleteStudent(i);
+
+                listItem.appendChild(deleteButton); // Add the button to the list item
+                studentList.appendChild(listItem); // Add the list item to the list container
+            }
+        }
+
+        // Add event listener to the "Add Student" button
+        addButton.addEventListener('click', addStudent);
+
+        // Optional: Allow pressing Enter key to add a student
+        studentInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                addStudent();
+            }
+        });
+
+    </script>
+</body>
+</html>
