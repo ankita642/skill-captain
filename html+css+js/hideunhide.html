@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide and Unhide with if-else</title>
+    <style>
+        
+        .content-box {
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f4f4f4;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="toggleVisibility()">Toggle Content</button>
+
+    <div id="myElement" class="content-box">
+        This is the content that will be hidden and shown.
+    </div>
+
+    <script>
+        function toggleVisibility() {
+            // Get the element by its ID
+            var element = document.getElementById("myElement");
+
+            // Check the current display style
+            if (element.style.display === "none") {
+                // If it's hidden, unhide it (set display to 'block' or similar)
+                element.style.display = "block";
+            } else {
+                // If it's visible, hide it
+                element.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

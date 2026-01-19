@@ -63,8 +63,20 @@ console.log("The sum is: " + sum);
 //arrow function
 const multiply = (x, y) => x * y;
 let product = multiply(4, 5);
-console.log("The product is: " + prod
+console.log("The product is: " + product);
 
+{/* <html>
+    <body>
+        <button onclick="console.log('Button clicked!')">Click Me</button> 
+
+    </body>
+</html>
+*/}
+
+//DOM
+
+let heading = document.get 
+ 
  
 
 
